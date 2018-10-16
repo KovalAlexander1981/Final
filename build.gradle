@@ -16,10 +16,11 @@ dependencies {
     compile group: 'org.testng', name: 'testng', version: '6.13.1'
     compile group: 'io.appium', name: 'java-client', version: '6.0.0-BETA4'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.8.1'
-    compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.0-BETA20'
+    //compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.0-BETA20'
 }
 
 test.doFirst { jvmArgs "-javaagent:${configurations.agent.singleFile}" }
+
 
 task androidTest(type:Test) {
     systemProperty "driver", "android"
