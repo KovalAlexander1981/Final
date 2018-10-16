@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" verbose="1">
+
+
+    <parameter name="browser" value="ios" />
+
+    <test name="RegressionIOS">
+        <parameter name="browser" value="ios" />
+
+        <classes>
+            <class name="Tests.FindFastestRouteBetweenTwoCities"/>
+        </classes>
+    </test>
+</suite>

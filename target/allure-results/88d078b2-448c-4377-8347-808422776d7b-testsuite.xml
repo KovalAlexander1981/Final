@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1539345756915" stop="1539345767684" version="1.4.0">
+    <name>Default Suite</name>
+    <test-cases>
+        <test-case start="1539345756983" stop="1539345767675" status="broken">
+            <name>test12</name>
+            <failure>
+                <message>WebDriverException: An unknown server-side error occurred while processing the command. Original error: The attribute 'text' is unknown. Valid attribute names are: (
+    UID,
+    accessibilityContainer,
+    accessible,
+    enabled,
+    frame,
+    label,
+    name,
+    rect,
+    type,
+    value,
+    visible,
+    wdAccessibilityContainer,
+    wdAccessible,
+    wdEnabled,
+    wdFrame,
+    wdLabel,
+    wdName,
+    wdRect,
+    wdType,
+    wdUID,
+    wdValue,
+    wdVisible
+)
+
+(
+	0   CoreFoundation                      0x0000000110af01cb __exceptionPreprocess + 171
+	1   libobjc.A.dylib                     0x0000000110452f41 objc_exception_throw + 48
+	2   WebDriverAgentLib                   0x000000012b0da49a +[FBElementUtils wdAttributeNameForAttributeName:] + 730
+	3   WebDriverAgentLib                   0x000000012b0f2580 -[XCElementSnapshot(WebDriverAttributes) fb_valueForWDAttributeName:] + 96
+	4   WebDriverAgentLib                   0x000000012b10fd0c +[FBElementCommands handleGetAttribute:] + 332
+	5   WebDriverAgentLib                   0x000000012b0e60a3 -[FBRoute_TargetAction mountRequest:intoResponse:] + 179
+	6   WebDriverAgentLib                   0x000000012b0d56d4 __37-[FBWebServer registerRouteHandlers:]_block_invoke + 548
+	7   RoutingHTTPServer                   0x000000012b1b4c18 -[RoutingHTTPServer handleRoute:withRequest:response:] + 136
+	8   RoutingHTTPServer                   0x000000012b1b54fa __72-[RoutingHTTPServer routeMethod:withPath:parameters:request:connection:]_block_invoke + 47
+	9   libdispatch.dylib                   0x00000001153312b5 _dispatch_client_callout + 8
+	10  libdispatch.dylib                   0x000000011533c999 _dispatch_sync_thread_bound_invoke + 108
+	11  libdispatch.dylib                   0x00000001153312b5 _dispatch_client_callout + 8
+	12  libdispatch.dylib                   0x000000011533b496 _dispatch_main_queue_callback_4CF + 1260
+	13  CoreFoundation                      0x0000000110ab2ef9 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+	14  CoreFoundation                      0x0000000110a77662 __CFRunLoopRun + 2402
+	15  CoreFoundation                      0x0000000110a76a89 CFRunLoopRunSpecific + 409
+	16  Foundation                          0x000000010fe4ee5e -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 274
+	17  WebDriverAgentLib                   0x000000012b0d458a -[FBWebServer startServing] + 346
+	18  WebDriverAgentRunner                0x000000012b0c1fbe -[UITestingUITests testRunner] + 126
+	19  CoreFoundation                      0x0000000110a7456c __invoking___ + 140
+	20  CoreFoundation                      0x0000000110a74440 -[NSInvocation invoke] + 320
+	21  XCTest                              0x000000010fd0a949 __24-[XCTestCase invokeTest]_block_invoke + 591
+	22  XCTest                              0x000000010fd52f45 -[XCUITestContext performInScope:] + 183
+	23  XCTest                              0x000000010fd0a6ef -[XCTestCase invokeTest] + 141
+	24  XCTest                              0x000000010fd0b6b0 __26-[XCTestCase performTest:]_block_invoke.369 + 42
+	25  XCTest                              0x000000010fd57c4b +[XCTContext runInContextForTestCase:block:] + 163
+	26  XCTest                              0x000000010fd0b04c -[XCTestCase performTest:] + 608
+	27  XCTest                              0x000000010fd07052 __27-[XCTestSuite performTest:]_block_invoke + 363
+	28  XCTest                              0x000000010fd069b9 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 26
+	29  XCTest                              0x000000010fd06bb6 -[XCTestSuite performTest:] + 239
+	30  XCTest                              0x000000010fd07052 __27-[XCTestSuite performTest:]_block_invoke + 363
+	31  XCTest                              0x000000010fd069b9 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 26
+	32  XCTest                              0x000000010fd06bb6 -[XCTestSuite performTest:] + 239
+	33  XCTest                              0x000000010fd07052 __27-[XCTestSuite performTest:]_block_invoke + 363
+	34  XCTest                              0x000000010fd069b9 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 26
+	35  XCTest                              0x000000010fd06bb6 -[XCTestSuite performTest:] + 239
+	36  XCTest                              0x000000010fd5f16d __44-[XCTTestRunSession runTestsAndReturnError:]_block_invoke + 40
+	37  XCTest                              0x000000010fd1a232 -[XCTestObservationCenter _observeTestExecutionForBlock:] + 475
+	38  XCTest                              0x000000010fd5f00c -[XCTTestRunSession runTestsAndReturnError:] + 281
+	39  XCTest                              0x000000010fcf66ab -[XCTestDriver runTestsAndReturnError:] + 314
+	40  XCTest                              0x000000010fd56eb6 _XCTestMain + 619
+	41  CoreFoundation                      0x0000000110a9320c __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 12
+	42  CoreFoundation                      0x0000000110a77a3b __CFRunLoopDoBlocks + 203
+	43  CoreFoundation                      0x0000000110a77214 __CFRunLoopRun + 1300
+	44  CoreFoundation                      0x0000000110a76a89 CFRunLoopRunSpecific + 409
+	45  GraphicsServices                    0x0000000113dae9c6 GSEventRunModal + 62
+	46  UIKit                               0x0000000110f6ad30 UIApplicationMain + 159
+	47  WebDriverAgentRunner-Runner         0x000000010fa71835 WebDriverAgentRunner-Runner + 6197
+	48  libdyld.dylib                       0x00000001153a5d81 start + 1
+)
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'GDKHA5087-wf', ip: 'fe80:0:0:0:5:d140:8901:2f15%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {automationName: XCUITest, browserName: , bundleId: com.apple.Maps, databaseEnabled: false, deviceName: iPhone 6, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: MAC, platformVersion: 11.0, takesScreenshot: true, udid: 3633706A-DD4D-4B4C-8D74-350..., webStorageEnabled: false}
+Session ID: 7d8a5c24-4d2f-41f9-afff-74d01d3c97e7</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: The attribute 'text' is unknown. Valid attribute names are: (
+    UID,
+    accessibilityContainer,
+    accessible,
+    enabled,
+    frame,
+    label,
+    name,
+    rect,
+    type,
+    value,
+    visible,
+    wdAccessibilityContainer,
+    wdAccessible,
+    wdEnabled,
+    wdFrame,
+    wdLabel,
+    wdName,
+    wdRect,
+    wdType,
+    wdUID,
+    wdValue,
+    wdVisible
+)
+
+(
+	0   CoreFoundation                      0x0000000110af01cb __exceptionPreprocess + 171
+	1   libobjc.A.dylib                     0x0000000110452f41 objc_exception_throw + 48
+	2   WebDriverAgentLib                   0x000000012b0da49a +[FBElementUtils wdAttributeNameForAttributeName:] + 730
+	3   WebDriverAgentLib                   0x000000012b0f2580 -[XCElementSnapshot(WebDriverAttributes) fb_valueForWDAttributeName:] + 96
+	4   WebDriverAgentLib                   0x000000012b10fd0c +[FBElementCommands handleGetAttribute:] + 332
+	5   WebDriverAgentLib                   0x000000012b0e60a3 -[FBRoute_TargetAction mountRequest:intoResponse:] + 179
+	6   WebDriverAgentLib                   0x000000012b0d56d4 __37-[FBWebServer registerRouteHandlers:]_block_invoke + 548
+	7   RoutingHTTPServer                   0x000000012b1b4c18 -[RoutingHTTPServer handleRoute:withRequest:response:] + 136
+	8   RoutingHTTPServer                   0x000000012b1b54fa __72-[RoutingHTTPServer routeMethod:withPath:parameters:request:connection:]_block_invoke + 47
+	9   libdispatch.dylib                   0x00000001153312b5 _dispatch_client_callout + 8
+	10  libdispatch.dylib                   0x000000011533c999 _dispatch_sync_thread_bound_invoke + 108
+	11  libdispatch.dylib                   0x00000001153312b5 _dispatch_client_callout + 8
+	12  libdispatch.dylib                   0x000000011533b496 _dispatch_main_queue_callback_4CF + 1260
+	13  CoreFoundation                      0x0000000110ab2ef9 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 9
+	14  CoreFoundation                      0x0000000110a77662 __CFRunLoopRun + 2402
+	15  CoreFoundation                      0x0000000110a76a89 CFRunLoopRunSpecific + 409
+	16  Foundation                          0x000000010fe4ee5e -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 274
+	17  WebDriverAgentLib                   0x000000012b0d458a -[FBWebServer startServing] + 346
+	18  WebDriverAgentRunner                0x000000012b0c1fbe -[UITestingUITests testRunner] + 126
+	19  CoreFoundation                      0x0000000110a7456c __invoking___ + 140
+	20  CoreFoundation                      0x0000000110a74440 -[NSInvocation invoke] + 320
+	21  XCTest                              0x000000010fd0a949 __24-[XCTestCase invokeTest]_block_invoke + 591
+	22  XCTest                              0x000000010fd52f45 -[XCUITestContext performInScope:] + 183
+	23  XCTest                              0x000000010fd0a6ef -[XCTestCase invokeTest] + 141
+	24  XCTest                              0x000000010fd0b6b0 __26-[XCTestCase performTest:]_block_invoke.369 + 42
+	25  XCTest                              0x000000010fd57c4b +[XCTContext runInContextForTestCase:block:] + 163
+	26  XCTest                              0x000000010fd0b04c -[XCTestCase performTest:] + 608
+	27  XCTest                              0x000000010fd07052 __27-[XCTestSuite performTest:]_block_invoke + 363
+	28  XCTest                              0x000000010fd069b9 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 26
+	29  XCTest                              0x000000010fd06bb6 -[XCTestSuite performTest:] + 239
+	30  XCTest                              0x000000010fd07052 __27-[XCTestSuite performTest:]_block_invoke + 363
+	31  XCTest                              0x000000010fd069b9 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 26
+	32  XCTest                              0x000000010fd06bb6 -[XCTestSuite performTest:] + 239
+	33  XCTest                              0x000000010fd07052 __27-[XCTestSuite performTest:]_block_invoke + 363
+	34  XCTest                              0x000000010fd069b9 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 26
+	35  XCTest                              0x000000010fd06bb6 -[XCTestSuite performTest:] + 239
+	36  XCTest                              0x000000010fd5f16d __44-[XCTTestRunSession runTestsAndReturnError:]_block_invoke + 40
+	37  XCTest                              0x000000010fd1a232 -[XCTestObservationCenter _observeTestExecutionForBlock:] + 475
+	38  XCTest                              0x000000010fd5f00c -[XCTTestRunSession runTestsAndReturnError:] + 281
+	39  XCTest                              0x000000010fcf66ab -[XCTestDriver runTestsAndReturnError:] + 314
+	40  XCTest                              0x000000010fd56eb6 _XCTestMain + 619
+	41  CoreFoundation                      0x0000000110a9320c __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 12
+	42  CoreFoundation                      0x0000000110a77a3b __CFRunLoopDoBlocks + 203
+	43  CoreFoundation                      0x0000000110a77214 __CFRunLoopRun + 1300
+	44  CoreFoundation                      0x0000000110a76a89 CFRunLoopRunSpecific + 409
+	45  GraphicsServices                    0x0000000113dae9c6 GSEventRunModal + 62
+	46  UIKit                               0x0000000110f6ad30 UIApplicationMain + 159
+	47  WebDriverAgentRunner-Runner         0x000000010fa71835 WebDriverAgentRunner-Runner + 6197
+	48  libdyld.dylib                       0x00000001153a5d81 start + 1
+)
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'GDKHA5087-wf', ip: 'fe80:0:0:0:5:d140:8901:2f15%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_181'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {automationName: XCUITest, browserName: , bundleId: com.apple.Maps, databaseEnabled: false, deviceName: iPhone 6, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, platform: MAC, platformName: MAC, platformVersion: 11.0, takesScreenshot: true, udid: 3633706A-DD4D-4B4C-8D74-350..., webStorageEnabled: false}
+Session ID: 7d8a5c24-4d2f-41f9-afff-74d01d3c97e7
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:129)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+	at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+	at io.appium.java_client.ios.IOSElement.execute(IOSElement.java:1)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:128)
+	at Pages.HomePage.lambda$isGetTipsListContains$1(HomePage.java:45)
+	at java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1359)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:449)
+	at Pages.HomePage.isGetTipsListContains(HomePage.java:45)
+	at Tests.FindFastestRouteBitweenTwoCities.test12(FindFastestRouteBitweenTwoCities.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels/>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="feature" value="finalTask_gr"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
