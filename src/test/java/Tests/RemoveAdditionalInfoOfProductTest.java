@@ -10,7 +10,7 @@ import static Helpers.Utils.*;
 public class RemoveAdditionalInfoOfProductTest extends BaseTest {
     @Test(description = "Remove from list additional info about products ")
     public void test8() {
-        app.homePage.createNewList("Final", "").addNewProductToList("Cake", "2", "1", Tare.l.name(), "try", "Dairy produce");
+        app.homePage.createNewList("Final", "").addNewProductToListGetPriceIt("Cake", "2", "1", Tare.l.name(), "try", "Dairy produce");
         String a = app.createList.getComents();
         String b = app.createList.getAmount();
         String c = app.createList.getPrice();

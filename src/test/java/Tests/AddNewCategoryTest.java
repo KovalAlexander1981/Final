@@ -14,7 +14,7 @@ public class AddNewCategoryTest extends BaseTest {
         Assert.assertEquals(app.homePage.clickButtonSet()
                 .addNewCategoryGoods("Categories List", "Alfa")
                 .createNewList("Victory", "")
-                .addNewProductToList("Cat food", "22", "1", Tare.bottles.name(), "For my kitty", "Alfa"), app.createList.getCheckPrice());
+                .addNewProductToListGetPriceIt("Cat food", "22", "1", Tare.bottles.name(), "For my kitty", "Alfa"), app.createList.getCheckPrice());
         backButtonTwice().deleteList();
     }
 }

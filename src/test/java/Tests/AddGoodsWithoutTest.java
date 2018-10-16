@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.AllPages;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,8 +12,8 @@ public class AddGoodsWithoutTest extends BaseTest {
     public void test6() {
 
         Assert.assertTrue(app.homePage.createNewList("Sunday", "")
-                .addNewProductToList("Iron", "", 0)
-                .addNewProductToList("Gold", "", 0)
+                .addNewProductToList("Iron", "")
+                .addNewProductToList("Gold", "")
                 .backButtonTwiceZ()
                 .isContainList("Sunday"));
         app.homePage.deleteList();

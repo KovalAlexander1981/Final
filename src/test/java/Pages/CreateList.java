@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import static Helpers.Utils.*;
@@ -63,13 +64,18 @@ public class CreateList extends BasePage {
         return listName.getText();
     }
 
-    public CreateList addNewProductToList(String goods, String orientation, int a) {
+    public CreateList addNewProductToList(String goods, String orientation) {
         textFieldProductName.sendKeys(goods);
         if ("Horizontal".equals(orientation)) {
             for (int i = 0; i < 3; i++) {
                 tap(0.85, 0.19);
             }
-            addProduct.click();
+            try{
+            addProduct.click();}
+            catch(WebDriverException e) {
+                tap(0.85, 0.19);
+                addProduct.click();
+            }
         } else {
             addProduct.click();
         }
@@ -99,7 +105,7 @@ public class CreateList extends BasePage {
     public boolean isElementPresent(String element) {
         boolean b = false;
         try {
-//      driver.findElementByXPath("//*[@text='" + element + "']").click();
+   //   driver.findElementByXPath("//*[@text='" + element + "']").click();
         } catch (NoSuchElementException ex) {
             b = true;
         }
@@ -112,9 +118,9 @@ public class CreateList extends BasePage {
     }
 
 
-    public CreateList addNewProductToList(String goods, String priceGood) {
+    public CreateList addNewProductToList(String goods, int priceGood) {
         textFieldProductName.sendKeys(goods);
-        numberFieldPrice.sendKeys(priceGood);
+        numberFieldPrice.sendKeys(priceGood + "");
         addProduct.click();
         return this;
     }
@@ -128,7 +134,7 @@ public class CreateList extends BasePage {
 
 
 
-    public int addNewProductToList(String goods, String priceGood, String amountGood, String Tare, String comments, String category) {
+    public int addNewProductToListGetPriceIt(String goods, String priceGood, String amountGood, String Tare, String comments, String category) {
         int price_good = parseInt(amountGood) * parseInt(priceGood);
         textFieldProductName.sendKeys(goods);
         numberFieldPrice.sendKeys(priceGood);

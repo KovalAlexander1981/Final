@@ -1,5 +1,6 @@
 package Pages;
 
+import Helpers.Utils;
 
 public class AllPages {
 
