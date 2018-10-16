@@ -1,8 +1,7 @@
 package Pages;
 
 
-import Helpers.Utils;
-import org.openqa.selenium.NoSuchElementException;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,41 +12,46 @@ import java.util.List;
 import static Helpers.Utils.*;
 
 
-
 public class SettingsPage extends BasePage {
 
+    @AndroidFindBy(id = "com.slava.buylist:id/button2")
     @FindBy(id = "com.slava.buylist:id/button2")
     private WebElement btnAddCategory;
 
+    @AndroidFindBy(className = "android.widget.EditText")
     @FindBy(className = "android.widget.EditText")
     private WebElement textNameCategory;
 
+    @AndroidFindBy(id = "android:id/button1")
     @FindBy(id = "android:id/button1")
     private WebElement btnOk;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/title")
     @FindBys(@FindBy(id = "com.slava.buylist:id/title"))
     private List<WebElement> listCategory;
 
+    @AndroidFindBy(id = "android:id/title")
     @FindBys(@FindBy(id = "android:id/title"))
     private List<WebElement> listRemoveSettings;
 
+    @AndroidFindBy(id = "android:id/text1")
     @FindBys(@FindBy(id = "android:id/text1"))
     private List<WebElement> choseOrientation;
 
+    @AndroidFindBy(id = "android:id/title")
     @FindBys(@FindBy(id = "android:id/title"))
     private List<WebElement> categorySettings;
 
+    @AndroidFindBy(id = "android:id/text1")
     @FindBys(@FindBy(id = "android:id/text1"))
     private List<WebElement> currencyList;
 
 
-    public HomePage backButtonTwiceZ(){
+    public HomePage backButtonTwiceZ() {
         backButtonTwice();
-        return new HomePage(); }
+        return new HomePage();
+    }
 
-    public HomePage backButtonZ(){
-        backButton();
-        return new HomePage(); }
 
     public SettingsPage clickListRemoveSettings() {
         for (int i = 0; i < listRemoveSettings.size(); i++) {
@@ -77,12 +81,13 @@ public class SettingsPage extends BasePage {
     }
 
     public HomePage addNewCategoryGoods(String category, String option) {
-       try{
-           scroll();
-        categorySettings.stream().filter(item -> item.getText().equals(category)).forEach(item -> item.click());}
-        catch (WebDriverException e) {
+        try {
             scroll();
-            categorySettings.stream().filter(item -> item.getText().equals(category)).forEach(item -> item.click());}
+            categorySettings.stream().filter(item -> item.getText().equals(category)).forEach(item -> item.click());
+        } catch (WebDriverException e) {
+            scroll();
+            categorySettings.stream().filter(item -> item.getText().equals(category)).forEach(item -> item.click());
+        }
         btnAddCategory.click();
         textNameCategory.sendKeys(option);
         btnOk.click();
@@ -96,7 +101,6 @@ public class SettingsPage extends BasePage {
         currencyList.stream().filter(items -> items.getText().trim().equals(option)).findFirst().get().click();
         return this;
     }
-
 
 
 }

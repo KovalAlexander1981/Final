@@ -10,7 +10,7 @@ import static Helpers.Utils.backButtonTwice;
 
 public class AddNewCategoryTest extends BaseTest {
     @Test(description = "Add new category in the products category list")
-    public void test10() {
+    public void AddNewCategoryTest() {
         Assert.assertEquals(app.homePage.clickButtonSet()
                 .addNewCategoryGoods("Categories List", "Alfa")
                 .createNewList("Victory", "")

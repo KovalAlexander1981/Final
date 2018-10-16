@@ -1,16 +1,16 @@
 package Pages;
 
-
-import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.WebDriver;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 
 import static Helpers.Utils.*;
+
 import java.util.List;
 
 public class HomePage extends BasePage {
+
     @FindBy(name = "Search for a place or address")
     private WebElement searchField;
 
@@ -30,55 +30,70 @@ public class HomePage extends BasePage {
     private List<WebElement> getInfoAboutRoute;
 
 
-
+    @AndroidFindBy(id = "com.slava.buylist:id/button1")
     @FindBy(id = "com.slava.buylist:id/button1")
     private WebElement btnPreferences;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/editText1")
     @FindBy(id = "com.slava.buylist:id/editText1")
     private WebElement textField;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/button2")
     @FindBy(id = "com.slava.buylist:id/button2")
     private WebElement btnAdd;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/imageView2")
     @FindBy(id = "com.slava.buylist:id/imageView2")
     private WebElement btnEdit;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/title")
     @FindBy(id = "com.slava.buylist:id/title")
     private WebElement listName;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/str1")
     @FindBy(id = "com.slava.buylist:id/str1")
     private WebElement listInfo;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/imageView1")
     @FindBys(@FindBy(id = "com.slava.buylist:id/imageView1"))
     private List<WebElement> listDelete;
 
+    @AndroidFindBy(id = "android:id/button1")
     @FindBy(id = "android:id/button1")
     private WebElement Yes;
 
+    @AndroidFindBy(id = "android:id/button2")
     @FindBy(id = "android:id/button2")
     private WebElement No;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/title")
     @FindBys(@FindBy(id = "com.slava.buylist:id/title"))
     private List<WebElement> listLists;
 
+    @AndroidFindBy(className = "android.widget.EditText")
     @FindBy(className = "android.widget.EditText")
     private WebElement listChangeNameField;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/str1")
     @FindBy(id = "com.slava.buylist:id/str1")
     private WebElement stringInfoList;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/title")
     @FindBys(@FindBy(id = "com.slava.buylist:id/title"))
     private List<WebElement> listOfList;
 
-
+    @AndroidFindBy(className = "android.widget.LinearLayout")
     @FindBy(className = "android.widget.LinearLayout")
     private WebElement settings;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/button2")
     @FindBy(id = "com.slava.buylist:id/button2")
     private WebElement exitFromApp;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/button2")
     @FindBy(id = "com.slava.buylist:id/button2")
     private WebElement btnDone;
+
 
     public HomePage searchCity(String cityName) {
         searchField.sendKeys(cityName);
@@ -89,7 +104,7 @@ public class HomePage extends BasePage {
         return tipsPlacesList.stream().allMatch(s -> s.getText().contains(city));
     }
 
-    public boolean createRoute(String city)  {
+    public boolean createRoute(String city) {
         tipsPlacesList.get(0).click();
         btnDirections.click();
         cityTextField.sendKeys(city);
@@ -103,7 +118,7 @@ public class HomePage extends BasePage {
     }
 
     public boolean isContainList(String name) {
-        return  listLists.stream().anyMatch(element -> element.getAttribute("text").matches(name));
+        return listLists.stream().anyMatch(element -> element.getAttribute("text").matches(name));
     }
 
 
@@ -115,13 +130,13 @@ public class HomePage extends BasePage {
         } else {
             btnAdd.click();
         }
-        return new  CreateList();
+        return new CreateList();
     }
 
     public HomePage deleteList() {
         listDelete.get(1).click();
         Yes.click();
-        return  this;
+        return this;
     }
 
     public HomePage renameList(String newNameList) {
@@ -148,12 +163,8 @@ public class HomePage extends BasePage {
         return new SettingsPage();
     }
 
-   public HomePage backButtonTwiceZ(){
-        backButtonTwice();
-        return this;
-    }
 
-    public HomePage backButtonZ(){
+    public HomePage backButtonZ() {
         backButton();
         return this;
     }

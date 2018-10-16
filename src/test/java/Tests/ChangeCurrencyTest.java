@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class ChangeCurrencyTest extends BaseTest {
 
     @Test(description = "Change currency in the APP")
-    public void test9() {
+    public void ChangeCurrencyTest() {
         String newCurrency = "$";
         app.homePage.createNewList("Asus", "").addNewProductToList("Oil", "");
         Assert.assertTrue(app.homePage.clickButtonSet().setCategoryCurrency("Currency", newCurrency).backButtonTwiceZ().infoList().contains(newCurrency));

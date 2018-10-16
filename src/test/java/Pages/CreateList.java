@@ -1,5 +1,6 @@
 package Pages;
 
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -9,49 +10,63 @@ import static java.lang.Integer.parseInt;
 
 public class CreateList extends BasePage {
 
-
+    @AndroidFindBy(id = "com.slava.buylist:id/editText1")
     @FindBy(id = "com.slava.buylist:id/editText1")
     private WebElement textGoods;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/textView1")
     @FindBy(id = "com.slava.buylist:id/textView1")
     private WebElement listName;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/editText1")
     @FindBy(id = "com.slava.buylist:id/editText1")
     private WebElement textFieldProductName;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/editText2")
     @FindBy(id = "com.slava.buylist:id/editText2")
     private WebElement numberFieldPrice;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/value")
     @FindBy(id = "com.slava.buylist:id/value")
     private WebElement currency;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/editText3")
     @FindBy(id = "com.slava.buylist:id/editText3")
     private WebElement numberFieldAmount;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/spinner1")
     @FindBy(id = "com.slava.buylist:id/spinner1")
     private WebElement dporTare;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/editText4")
     @FindBy(id = "com.slava.buylist:id/editText4")
     private WebElement commentsField;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/spinner2")
     @FindBy(id = "com.slava.buylist:id/spinner2")
     private WebElement dropCategory;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/button2")
     @FindBy(id = "com.slava.buylist:id/button2")
     private WebElement addProduct;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/textView2")
     @FindBy(id = "com.slava.buylist:id/textView2")
     private WebElement listPrice;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/str1")
     @FindBy(id = "com.slava.buylist:id/str1")
     private WebElement textCommentary;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/TextView01")
     @FindBy(id = "com.slava.buylist:id/TextView01")
     private WebElement textAmount;
 
+    @AndroidFindBy(xpath = "//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView[4]")
     @FindBy(xpath = "//android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView[4]")
     private WebElement textPrice;
 
+    @AndroidFindBy(id = "com.slava.buylist:id/title")
     @FindBy(id = "com.slava.buylist:id/title")
     private WebElement getNameGood;
 
@@ -102,10 +117,11 @@ public class CreateList extends BasePage {
         return textPrice.getText();
     }
 
+
     public boolean isElementPresent(String element) {
         boolean b = false;
         try {
-   //   driver.findElementByXPath("//*[@text='" + element + "']").click();
+      findElementByXPath("//*[@text='" + element + "']");
         } catch (NoSuchElementException ex) {
             b = true;
         }

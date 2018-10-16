@@ -43,7 +43,7 @@ public class DriverFactory {
             caps.setCapability("appPackage", "com.slava.buylist");
             caps.setCapability("appActivity", "com.slava.buylist.MainActivity");
             try {
-                driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
+                driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), caps);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

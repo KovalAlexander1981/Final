@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class ChangeOrientationTest extends BaseTest {
     @Test(description = "Change the App orientation")
 
-    public void test11() {
+    public void ChangeOrientationTest() {
         app.homePage.clickButtonSet().ChangeOrientation("Horizontal").backButtonZ();
         app.homePage.createNewList("Wow", "Horizontal")
         .addNewProductToList("Cat food", "Horizontal");

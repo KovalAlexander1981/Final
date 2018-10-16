@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class FindFastestRouteBetweenTwoCities extends BaseTest {
     @Test(description = "FindFastestRouteBetweenTwoCities")
-    public void test12()  {
+    public void FindFastestRouteBetweenTwoCities()  {
         Assert.assertTrue(app.homePage.searchCity("Kharkiv").isGetTipsListContains("Kharkiv"));
         Assert.assertTrue(app.homePage.createRoute("kiev"));
     }
